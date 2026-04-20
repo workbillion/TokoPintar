@@ -174,7 +174,7 @@ export default function POS({ userId, products, customers, onAddOrder, onAddDebt
             <X className="w-5 h-5 md:w-6 md:h-6" />
           </button>
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center overflow-hidden border border-black/5">
               <img 
                 src="/logo.svg" 
                 alt="Logo" 

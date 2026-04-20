@@ -155,7 +155,7 @@ export default function More({
     return (
       <div className="pb-24">
         <div className="flex flex-col items-center mb-10">
-          <div className="w-24 h-24 flex items-center justify-center mb-4 overflow-hidden">
+          <div className="w-24 h-24 bg-white rounded-[32px] shadow-strong flex items-center justify-center mb-4 overflow-hidden border border-black/5">
             <img 
               src="/logo.svg" 
               alt="Logo" 
@@ -218,7 +218,7 @@ export default function More({
 
 
         <div className="flex flex-col items-center mt-12 opacity-50">
-          <div className="w-8 h-8 flex items-center justify-center mb-2 overflow-hidden">
+          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mb-2 overflow-hidden border border-black/5 shadow-sm">
             <img 
               src="/logo.svg" 
               alt="Logo Small" 

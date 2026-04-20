@@ -238,7 +238,7 @@ export default function Auth({ onClose, onSuccess, showToast }: AuthProps) {
         </button>
 
         <div className="text-center mb-8">
-          <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+          <div className="w-20 h-20 bg-white rounded-2xl shadow-soft flex items-center justify-center mx-auto mb-4 overflow-hidden border border-black/5">
             <img 
               src="/logo.svg" 
               alt="Logo" 

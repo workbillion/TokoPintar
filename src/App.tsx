@@ -620,7 +620,7 @@ export default function App() {
             },
             opacity: { duration: 0.5 }
           }}
-          className="w-32 h-32 mb-8 flex items-center justify-center"
+          className="w-32 h-32 mb-8 flex items-center justify-center bg-white rounded-[40px] shadow-strong border border-black/5"
         >
           <img 
             src="/logo.svg" 
@@ -741,7 +741,7 @@ export default function App() {
     if (!config || !config.onboarded) {
       if (userRole === 'kasir' && cloudUser) {
         return (
-          <div className="min-h-screen bg-secondary flex flex-col items-center justify-center p-8 text-center">
+          <div className="min-h-screen bg-background flex flex-col items-center justify-center p-8 text-center">
             <motion.div
               animate={{ 
                 scale: [0.7, 0.8, 0.7],
@@ -751,7 +751,7 @@ export default function App() {
                 duration: 2,
                 ease: "easeInOut"
               }}
-              className="w-32 h-32 mb-8 flex items-center justify-center"
+              className="w-32 h-32 mb-8 flex items-center justify-center bg-white rounded-[40px] shadow-strong border border-black/5"
             >
               <img 
                 src="/logo.svg" 

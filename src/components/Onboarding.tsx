@@ -43,7 +43,7 @@ export default function Onboarding({ onComplete, onOpenAuth, initialStep = 1 }: 
             exit={{ opacity: 0, x: -20 }}
             className="flex-1 flex flex-col items-center justify-center text-center"
           >
-            <div className="w-24 h-24 flex items-center justify-center mb-8 overflow-hidden">
+            <div className="w-24 h-24 bg-white rounded-[32px] shadow-strong flex items-center justify-center mb-8 overflow-hidden border border-black/5">
               <img 
                 src="/logo.svg" 
                 alt="Logo" 
@@ -73,7 +73,7 @@ export default function Onboarding({ onComplete, onOpenAuth, initialStep = 1 }: 
             exit={{ opacity: 0, x: -20 }}
             className="flex-1 flex flex-col items-center justify-center text-center"
           >
-            <div className="w-24 h-24 flex items-center justify-center mb-8 overflow-hidden">
+            <div className="w-24 h-24 bg-white rounded-[32px] shadow-strong flex items-center justify-center mb-8 overflow-hidden border border-black/5">
               <img 
                 src="/logo.svg" 
                 alt="Logo" 
