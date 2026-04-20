@@ -1,0 +1,73 @@
+============================================================
+PANDUAN AKTIVASI CLOUD SYNC (FIREBASE) - TOKO PINTAR
+============================================================
+
+Aplikasi TokoPintar secara default berjalan dalam "Mode Lokal" 
+(Data tersimpan di browser). Untuk mengaktifkan fitur Backup 
+Cloud, Sinkronisasi antar Perangkat, dan Pendaftaran Kasir, 
+Anda perlu menghubungkan aplikasi ini ke akun Firebase Anda sendiri.
+
+Langkah-langkah Setup:
+
+1. BUAT PROJECT FIREBASE
+------------------------
+- Buka: https://console.firebase.google.com/
+- Klik "Add Project" dan beri nama (Misal: TokoPintar-App).
+- Continue -> Disable Google Analytics (opsional) -> Create Project.
+
+2. AKTIFKAN DATABASE (FIRESTORE)
+--------------------------------
+- Di menu kiri, pilih Build > Firestore Database.
+- Klik "Create Database".
+- Pilih Lokasi: asia-southeast1 (Singapura) untuk kecepatan terbaik di Indonesia.
+- Pilih "Start in test mode" -> Create.
+
+3. AKTIFKAN LOGIN (AUTHENTICATION)
+----------------------------------
+- Di menu kiri, pilih Build > Authentication.
+- Klik "Get Started".
+- Pilih Tab "Sign-in method" -> Add new provider.
+- Aktifkan "Email/Password" DAN "Google". Klik Save.
+
+4. AMBIL CONFIGURASI WEB
+------------------------
+- Klik ikon "Settings" (roda gigi) di samping Project Overview > Project Settings.
+- Scroll ke bawah ke bagian "Your apps" -> Klik ikon "</>" (Web).
+- Masukkan Nama App (Misal: TokoPintar-Web) -> Register App.
+- Anda akan melihat kode "firebaseConfig". CONTOH:
+  apiKey: "AIzasy...",
+  authDomain: "...", dst.
+
+5. SETTING DI SOURCE CODE
+-------------------------
+- Buka folder source code TokoPintar.
+- Cari file: firebase-applet-config.json
+- Buka dengan Notepad/Text Editor.
+- Ganti nilai di dalamnya dengan data yang Anda dapatkan di Langkah 4.
+- SIMPAN file tersebut.
+
+6. PASANG SECURITY RULES (PENTING!)
+-----------------------------------
+- Kembali ke Firebase Console > Firestore Database > Tab "Rules".
+- Hapus semua isinya, ganti dengan isi file 'firestore.rules' yang 
+  sudah kami sediakan di folder aplikasi. 
+- Klik "Publish". Ini wajib agar data Anda tidak dijebol hacker.
+
+7. RESTART APLIKASI
+-------------------
+- Jika Anda sedang menjalankan npm run dev, tutup terminal dan jalankan ulang.
+- Buka Dashboard > Menu Lainnya.
+- Sekarang Anda bisa pilih "Login untuk Backup" menggunakan Google atau Email.
+
+------------------------------------------------------------
+CATATAN PENTING:
+- Firebase bersifat GRATIS (Spark Plan) selama penggunaan Anda tidak 
+  melebihi kuota harian Google (biasanya sangat cukup untuk puluhan toko).
+- Jangan membagikan file 'firebase-applet-config.json' Anda kepada 
+  siapa pun karena berisi kunci akses ke database Anda.
+- Selalu lakukan backup berkala (.json) dari menu Pengaturan 
+  meskipun sudah menggunakan Cloud.
+
+============================================================
+Terima Kasih - Tim TokoPintar Indonesia
+============================================================

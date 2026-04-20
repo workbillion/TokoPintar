@@ -1,0 +1,133 @@
+============================================================
+           BUKU PANDUAN PENGGUNA - APLIKASI TOKOPINTAR
+                "Solusi Jualan Online & Offline"
+============================================================
+
+Aplikasi TokoPintar adalah sistem kasir (POS) dan manajemen toko 
+yang dirancang untuk membantu UMKM mengelola stok, pesanan, 
+pelanggan, hingga laporan keuangan secara profesional.
+
+------------------------------------------------------------
+DAFTAR ISI:
+------------------------------------------------------------
+1.  Aktivasi & Lisensi (Penting!)
+2.  Manajemen Produk (Katalog)
+3.  Transaksi Kasir (POS)
+4.  Manajemen Pesanan (Orders)
+5.  Laporan Keuangan & Omset
+6.  Hutang Piutang (Debts)
+7.  Manajemen Pelanggan
+8.  Fitur Cloud & Backup
+9.  Sistem Multi-User (Admin vs Kasir)
+10. Program Reseller & Panel Owner (Opsional)
+
+------------------------------------------------------------
+1. AKTIVASI & LISENSI
+------------------------------------------------------------
+Aplikasi ini menggunakan sistem lisensi resmi untuk keamanan.
+- Setelah pendaftaran, Admin wajib memasukkan License Key.
+- Format Kunci: TP-XXXX-XXXX-XXXX.
+- Satu kunci hanya berlaku untuk satu perangkat (Device Lock).
+- Jika belum punya kunci, hubungi Admin Utama melalui tombol 
+  "Beli Lisensi" di layar aktivasi.
+
+------------------------------------------------------------
+2. MANAJEMEN PRODUK (KATALOG)
+------------------------------------------------------------
+Menu ini digunakan untuk mengatur barang dagangan Anda.
+- Tambah Produk: Klik tab 'Katalog' > tombol '+'.
+- Isi Detail: Nama, SKU (Kode), Harga Modal (HPP), Harga Jual, 
+  dan Stok Awal.
+- Stok Menipis: Atur 'Minimal Stok'. Jika stok di bawah angka 
+  ini, Anda akan mendapat notifikasi otomatis.
+- Edit/Hapus: Klik pada kartu produk untuk mengubah data atau 
+  menghapus produk.
+
+------------------------------------------------------------
+3. TRANSAKSI KASIR (POS)
+------------------------------------------------------------
+Fitur utama untuk melayani pembeli dengan cepat.
+- Buka POS: Klik tombol 'Kasir POS' di Dashboard atau tab Orders.
+- Pilih Produk: Klik pada produk untuk menambah ke keranjang.
+- Cari Produk: Gunakan kolom pencarian di bagian atas.
+- Checkout: Klik 'Total Bayar' di bagian bawah.
+- Metode Bayar: Pilih COD, Transfer, QRIS, atau Tempo (Hutang).
+- Struk: Setelah sukses, Anda bisa membagikan struk belanja 
+  langsung ke WhatsApp pelanggan.
+
+------------------------------------------------------------
+4. MANAJEMEN PESANAN (ORDERS)
+------------------------------------------------------------
+Memantau semua transaksi yang masuk.
+- Status Pesanan: Baru Masuk, Dikonfirmasi, Diproses, Dikirim, 
+  Selesai, atau Dibatalkan.
+- Update Status: Klik pada pesanan untuk mengubah statusnya.
+- Resi Pengiriman: Anda bisa menginput nomor resi saat pesanan 
+  berstatus 'Dikirim'.
+
+------------------------------------------------------------
+5. LAPORAN KEUANGAN & OMSET
+------------------------------------------------------------
+Pantau kesehatan bisnis Anda secara real-time.
+- Lokasi: Menu 'Lainnya' > 'Laporan Keuangan'.
+- Omset Periode: Lihat total penjualan Hari Ini, Minggu Ini, 
+  dan Bulan Ini.
+- Profit (Laba Bersih): Sistem otomatis menghitung Laba Bersih 
+  setelah dikurangi Modal (HPP) dan Biaya Operasional.
+- Catat Pengeluaran: Masukkan biaya seperti listrik, plastik, 
+  atau bensin di bagian 'Catat Pengeluaran Baru'.
+- Produk Terlaris: Lihat 3 produk yang paling banyak terjual.
+
+------------------------------------------------------------
+6. HUTANG PIUTANG (DEBTS)
+------------------------------------------------------------
+Mencatat pelanggan yang belum lunas (Tempo).
+- Cara Catat: Saat di POS, pilih metode bayar 'Tempo/Hutang'.
+- Pantau Hutang: Menu 'Lainnya' > 'Hutang Piutang'.
+- Bayar Hutang: Klik pada nama pelanggan untuk mencatat 
+  pembayaran cicilan atau pelunasan.
+
+------------------------------------------------------------
+7. MANAJEMEN PELANGGAN
+------------------------------------------------------------
+Membangun database pelanggan yang loyal.
+- VIP Status: Berikan status VIP untuk pelanggan setia agar 
+  mendapat diskon otomatis saat transaksi di POS.
+- Riwayat: Lihat total belanja dan frekuensi order setiap 
+  pelanggan.
+
+------------------------------------------------------------
+8. FITUR CLOUD & BACKUP
+------------------------------------------------------------
+Pastikan data Anda tidak hilang jika HP rusak/ganti.
+- Login Google: Gunakan akun Gmail untuk sinkronisasi otomatis.
+- Cadangkan: Klik 'Cadangkan' untuk mengirim data ke server.
+- Pulihkan: Klik 'Pulihkan' untuk mengambil data lama ke HP baru.
+- Ekspor/Impor: Anda juga bisa mendownload file backup (.json) 
+  secara manual.
+
+------------------------------------------------------------
+9. SISTEM MULTI-USER (ADMIN VS KASIR)
+------------------------------------------------------------
+- Admin (Pemilik): Memiliki akses penuh ke semua fitur, 
+  termasuk laporan keuangan dan hapus data.
+- Kasir (Karyawan): Hanya bisa akses POS dan Hutang. Tidak bisa 
+  melihat laporan keuangan atau mengubah harga produk.
+- Cara Tambah Kasir: Berikan 'Kode Toko' (UID Admin) Anda kepada 
+  karyawan saat mereka mendaftar sebagai Kasir.
+
+------------------------------------------------------------
+10. PROGRAM RESELLER & PANEL OWNER
+------------------------------------------------------------
+Fitur khusus untuk Anda yang ingin menjual kembali aplikasi ini.
+- Panel Owner: Hanya muncul untuk email utama Anda. Digunakan 
+  untuk men-generate License Key baru.
+- Cara Jual: Terima pembayaran > Generate Kunci > Kirim ke 
+  pembeli via WhatsApp.
+- Keamanan: Setiap kunci yang Anda buat adalah aset berharga. 
+  Jangan berikan sebelum pembayaran lunas.
+
+============================================================
+Terima kasih telah menggunakan TokoPintar. 
+Semoga bisnis Anda semakin sukses dan barokah!
+============================================================

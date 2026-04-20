@@ -1,0 +1,99 @@
+{
+  "entities": {
+    "StoreConfig": {
+      "title": "StoreConfig",
+      "description": "Configuration for the user's store",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "owner": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "type": { "type": "string", "enum": ["Fashion", "Kosmetik", "Makanan", "Aksesoris", "Elektronik", "Lain-lain"] },
+        "address": { "type": "string" },
+        "bankAccount": { "type": "string" },
+        "logo": { "type": "string" },
+        "onboarded": { "type": "boolean" },
+        "categories": { "type": "array" },
+        "miniStoreGreeting": { "type": "string" },
+        "shareMessage": { "type": "string" },
+        "cashierPin": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "owner", "whatsapp", "type"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Product in the store",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sku": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "costPrice": { "type": "number" },
+        "salePrice": { "type": "number" },
+        "stock": { "type": "number" },
+        "weight": { "type": "number" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "variants": { "type": "array" },
+        "badge": { "type": "string", "enum": ["Best Seller", "New Arrival", "Ready", "Indent", "Habis"] },
+        "minStock": { "type": "number" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "name", "salePrice", "stock"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerWhatsapp": { "type": "string" },
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "discountAmount": { "type": "number" },
+        "shippingCost": { "type": "number" },
+        "paymentMethod": { "type": "string", "enum": ["COD", "Transfer", "QRIS", "Tempo/Hutang"] },
+        "expedition": { "type": "string", "enum": ["JNE", "J&T", "SiCepat", "Anteraja", "GoSend", "Ambil Sendiri"] },
+        "receiptNumber": { "type": "string" },
+        "status": { "type": "string", "enum": ["Baru Masuk", "Dikonfirmasi", "Diproses", "Dikirim", "Selesai", "Dibatalkan"] },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "customerName", "totalAmount", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/config/main": {
+      "schema": "StoreConfig",
+      "description": "User's store configuration"
+    },
+    "/users/{userId}/products/{productId}": {
+      "schema": "Product",
+      "description": "User's products"
+    },
+    "/users/{userId}/orders/{orderId}": {
+      "schema": "Order",
+      "description": "User's orders"
+    },
+    "/users/{userId}/customers/{customerId}": {
+      "schema": "object",
+      "description": "User's customers"
+    },
+    "/users/{userId}/expenses/{expenseId}": {
+      "schema": "object",
+      "description": "User's expenses"
+    },
+    "/users/{userId}/reminders/{reminderId}": {
+      "schema": "object",
+      "description": "User's reminders"
+    },
+    "/users/{userId}/notifications/{notifId}": {
+      "schema": "object",
+      "description": "User's notifications"
+    }
+  }
+}

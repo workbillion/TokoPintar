@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-primary: #9CAF88;
+  --color-secondary: #1A1A1A;
+  --color-success: #859F3D;
+  --color-danger: #E27D60;
+  --color-background: #FDFCF8;
+  --color-card: #FFFFFF;
+  --color-text: #1A1A1A;
+  
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.04);
+  --shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-[32px] border border-black/5 shadow-soft p-6 transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white rounded-[20px] h-[56px] px-8 font-bold flex items-center justify-center transition-all active:scale-95 shadow-lg shadow-primary/20 hover:brightness-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white rounded-[20px] h-[56px] px-8 font-bold flex items-center justify-center transition-all active:scale-95 shadow-lg shadow-black/10 hover:brightness-110;
+  }
+  
+  .input-field {
+    @apply bg-white border border-black/5 rounded-[18px] p-4 w-full focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all font-medium;
+  }
+  
+  .badge {
+    @apply px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest;
+  }
+  
+  .fab {
+    @apply fixed bottom-24 right-6 w-[64px] h-[64px] rounded-full bg-secondary text-white shadow-strong flex items-center justify-center z-40 active:scale-90 transition-transform;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0E0E0;
+  border-radius: 10px;
+}

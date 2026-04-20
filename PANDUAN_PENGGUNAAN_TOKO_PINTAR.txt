@@ -1,0 +1,143 @@
+========================================================================
+PANDUAN PENGGUNAAN: TOKO PINTAR | APLIKASI UMKM PINTAR
+========================================================================
+
+Seluruh fitur dirancang untuk memudahkan pelaku UMKM dalam mengelola 
+bisnis secara profesional, cepat, dan aman.
+
+------------------------------------------------------------------------
+1. CARA LOGIN SEBAGAI ADMIN & FUNGSINYA
+------------------------------------------------------------------------
+- Cara Login: Pilih peran "Admin" pada menu Login/Daftar. Anda bisa 
+  menggunakan akun Google (lebih cepat) atau Email & Password.
+- Fungsi: Admin memiliki kontrol penuh atas seluruh sistem, termasuk:
+  * Mengelola stok produk dan harga.
+  * Melihat laporan keuangan lengkap (Profit & Rugi).
+  * Mengatur PIN Kasir dan mendapatkan "Kode Toko".
+  * Mengelola daftar pelanggan dan hutang.
+
+------------------------------------------------------------------------
+2. FUNGSI FITUR HOME (DASHBOARD)
+------------------------------------------------------------------------
+- Menampilkan ringkasan bisnis hari ini secara real-time:
+  * Omzet Hari Ini: Total penjualan kotor.
+  * Pesanan Baru: Jumlah pesanan yang perlu diproses.
+  * Total Pelanggan: Jumlah basis data pembeli Anda.
+  * Stok Habis: Peringatan jika ada produk yang stoknya kritis.
+- Grafik Penjualan: Melihat tren penjualan dalam hitungan jam/hari.
+
+------------------------------------------------------------------------
+3. FUNGSI FITUR PESANAN (ORDERS)
+------------------------------------------------------------------------
+- Tempat mengelola semua transaksi yang masuk.
+- Status Pesanan: Beri tanda pada pesanan (Pending, Diproses, Dikirim, 
+  Selesai).
+- Riwayat: Melacak riwayat belanja setiap pelanggan.
+- Invoice WA: Kirim bukti nota belanja langsung ke WhatsApp pelanggan.
+
+------------------------------------------------------------------------
+4. FUNGSI FITUR KATALOG (PRODUK)
+------------------------------------------------------------------------
+- Tambah Produk: Masukkan Nama, SKU (Barcode), Harga Beli, Harga Jual, 
+  dan Stok.
+- Kelola Stok: Stok akan berkurang otomatis setiap kali ada penjualan 
+  di menu POS/Pesanan.
+- Kategori: Kelompokkan produk agar lebih mudah dicari.
+
+------------------------------------------------------------------------
+5. FUNGSI FITUR HUTANG (DEBTS)
+------------------------------------------------------------------------
+- Mencatat siapa saja yang berhutang di toko Anda.
+- Fitur Cicilan: Catat pembayaran bertahap hingga lunas.
+- Tanggal Jatuh Tempo: Pantau kapan hutang harus ditagih.
+
+------------------------------------------------------------------------
+6. FUNGSI FITUR LAINNYA (MORE MENU)
+------------------------------------------------------------------------
+- Pusat pengaturan aplikasi yang berisi menu Laporan, Pengingat, 
+  Catatan Pengeluaran, Backup data, dan Pengaturan Profil Toko.
+
+------------------------------------------------------------------------
+7. FUNGSI FITUR BAGIKAN KATALOG (MINI STORE)
+------------------------------------------------------------------------
+- Buat toko online sendiri hanya dengan satu klik!
+- Bagikan link katalog ke sosial media (IG/WA). Pelanggan bisa melihat 
+  produk Anda tanpa harus download aplikasi.
+
+------------------------------------------------------------------------
+8. LAPORAN KEUANGAN & CARA BACA LAPORAN
+------------------------------------------------------------------------
+- Cara Baca:
+  * Penjualan Kotor (Omzet): Total uang masuk dari penjualan.
+  * Pengeluaran: Total biaya operasional yang Anda catat.
+  * Laba Bersih: (Omzet - Harga Modal Produk) - Pengeluaran.
+- Analisis: Jika "Laba Bersih" berwarna hijau, bisnis Anda untung.
+
+------------------------------------------------------------------------
+9. FUNGSI FITUR PENGATURAN (SETTINGS)
+------------------------------------------------------------------------
+- Profil Toko: Ubah Nama Toko, Nama Pemilik, dan Nomor WhatsApp.
+- Rekening Bank: Atur data rekening untuk dicetak di invoice.
+- PIN Kasir: Atur PIN unik (6 digit) agar kasir bisa login ke POS.
+
+------------------------------------------------------------------------
+10. FUNGSI FITUR BACKUP & RESTORE (LOCAL FILE)
+------------------------------------------------------------------------
+- Backup: Mengunduh semua data toko ke dalam satu file .json di HP/Laptop.
+- Restore: Memasukkan kembali data dari file .json jika aplikasi terhapus.
+
+------------------------------------------------------------------------
+11. FUNGSI FITUR CADANGKAN & PULIHKAN (CLOUD SYNC)
+------------------------------------------------------------------------
+- Cadangkan (Sync): Mengirim data ke server aman Google agar bisa 
+  diakses dari perangkat lain.
+- Pulihkan (Pull): Mengambil data terbaru dari server ke HP baru Anda.
+
+------------------------------------------------------------------------
+12. FUNGSI FITUR PENGINGAT & JADWAL (REMINDERS)
+------------------------------------------------------------------------
+- Catat agenda harian seperti "Bayar Listrik", "Restock Barang", atau 
+  "Tagih Hutang Bapak A". Notifikasi akan muncul sebagai pengingat.
+
+------------------------------------------------------------------------
+13. FUNGSI FITUR DAFTAR PELANGGAN (CUSTOMERS)
+------------------------------------------------------------------------
+- Simpan Nomor WA dan alamat pelanggan tetap.
+- Fitur VIP: Berikan diskon khusus otomatis bagi pelanggan setia Anda 
+  setiap kali mereka belanja di Kasir POS.
+
+------------------------------------------------------------------------
+14. FUNGSI MENU POS (KASIR) & CARA INPUT DISKON
+------------------------------------------------------------------------
+- Pilih produk dengan cepat atau gunakan scan barcode.
+- Cara Input Diskon:
+  1. Klik tombol "Diskon" di keranjang belanja.
+  2. Pilih tipe "Persen (%)" (contoh: 10%) atau "Nominal (Rp)" (contoh: 5000).
+- Metode Bayar: Pilih Tunai (COD), Transfer, QRIS, atau Hutang.
+
+------------------------------------------------------------------------
+15. CATATAN PENGELUARAN (EXPENSES)
+------------------------------------------------------------------------
+- Masukkan biaya operasional (Gaji karyawan, Listrik, Parkir, Sewa).
+- Pengeluaran ini akan langsung memotong Laba Bersih di Laporan Keuangan.
+
+------------------------------------------------------------------------
+16. CARA LOGIN KASIR & CARA PAKAINYA
+------------------------------------------------------------------------
+- Login Kasir: Pilih peran "Kasir" di menu Login. Masukkan Email 
+  Kasir dan "KODE TOKO" (minta kode UID ini dari Admin).
+- Cara Pakai:
+  1. Kasir harus memasukkan PIN yang telah dibuat Admin.
+  2. Kasir hanya bisa mengakses menu POS untuk jualan.
+  3. Seluruh penjualan Kasir akan masuk ke laporan Admin secara otomatis.
+
+------------------------------------------------------------------------
+17. FITUR TAMBAHAN (NOTIFIKASI & PRINTER)
+------------------------------------------------------------------------
+- Notifikasi Stok: Muncul otomatis jika produk sisa sedikit.
+- Cetak Struk: Hubungkan ke Printer Bluetooth untuk cetak struk fisik.
+- Multi User: Admin bisa memantau penjualan dari rumah saat kasir berjualan.
+
+========================================================================
+             TOKO PINTAR - BISNIS RAPI, CUAN MAKIN HAPPY!
+========================================================================

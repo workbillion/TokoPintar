@@ -1,0 +1,17 @@
+{
+  "name": "TokoPintar",
+  "short_name": "TokoPintar",
+  "description": "Aplikasi Jualan Canggih UMKM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCF8",
+  "theme_color": "#9CAF88",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

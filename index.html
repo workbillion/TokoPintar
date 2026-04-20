@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TokoPintar — Aplikasi Pintar UMKM Indonesia</title>
+    <meta name="description" content="TokoPintar adalah aplikasi kasir (POS) dan manajemen stok canggih yang dirancang khusus untuk UMKM Indonesia. Kelola jualan, pesanan, dan pelanggan dengan mudah.">
+    <meta name="keywords" content="aplikasi kasir, POS UMKM, manajemen stok, toko online, UMKM Indonesia, TokoPintar">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <meta name="theme-color" content="#D4AF37">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Workaround for "Cannot redefine property: ethereum" error
+      // This error is typically caused by browser extensions (like MetaMask) 
+      // conflicting with other scripts in the development environment.
+      (function() {
+        try {
+          const originalDefineProperty = Object.defineProperty;
+          Object.defineProperty = function(obj, prop, descriptor) {
+            if (obj === window && prop === 'ethereum') {
+              try {
+                const existing = Object.getOwnPropertyDescriptor(obj, prop);
+                if (existing && !existing.configurable) {
+                  console.warn('Prevented redefinition of non-configurable window.ethereum');
+                  return obj;
+                }
+              } catch (e) {}
+            }
+            return originalDefineProperty.apply(this, arguments);
+          };
+        } catch (e) {}
+      })();
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

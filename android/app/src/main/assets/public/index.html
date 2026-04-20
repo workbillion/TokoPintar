@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TokoKita — Aplikasi Reseller Pintar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Workaround for "Cannot redefine property: ethereum" error
+      // This error is typically caused by browser extensions (like MetaMask) 
+      // conflicting with other scripts in the development environment.
+      (function() {
+        try {
+          const originalDefineProperty = Object.defineProperty;
+          Object.defineProperty = function(obj, prop, descriptor) {
+            if (obj === window && prop === 'ethereum') {
+              try {
+                const existing = Object.getOwnPropertyDescriptor(obj, prop);
+                if (existing && !existing.configurable) {
+                  console.warn('Prevented redefinition of non-configurable window.ethereum');
+                  return obj;
+                }
+              } catch (e) {}
+            }
+            return originalDefineProperty.apply(this, arguments);
+          };
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BRXxieLp.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CANpCaj_.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+

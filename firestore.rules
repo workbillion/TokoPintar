@@ -1,0 +1,89 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // --- REUSABLE HELPERS ---
+    function isSignedIn() { return request.auth != null; }
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+    function isValidId(id) { return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    // --- VALIDATION BLUEPRINTS ---
+    
+    function isValidStoreConfig(data) {
+      return data.keys().hasAll(['name', 'owner', 'whatsapp', 'type']) &&
+             data.name is string && data.name.size() <= 100 &&
+             data.owner is string && data.owner.size() <= 100 &&
+             data.whatsapp is string && data.whatsapp.size() <= 20 &&
+             data.type in ["Fashion", "Kosmetik", "Makanan", "Aksesoris", "Elektronik", "Lain-lain"];
+    }
+
+    function isValidProduct(data) {
+      return data.keys().hasAll(['id', 'name', 'salePrice', 'stock']) &&
+             data.id is string && isValidId(data.id) &&
+             data.name is string && data.name.size() <= 200 &&
+             data.salePrice is number && data.salePrice >= 0 &&
+             data.stock is number && data.stock >= -1000000;
+    }
+
+    function isValidOrder(data) {
+      return data.keys().hasAll(['id', 'customerName', 'totalAmount', 'status', 'createdAt']) &&
+             data.id is string && isValidId(data.id) &&
+             data.customerName is string && data.customerName.size() <= 100 &&
+             data.totalAmount is number && data.totalAmount >= 0 &&
+             data.status in ["Baru Masuk", "Dikonfirmasi", "Diproses", "Dikirim", "Selesai", "Dibatalkan"];
+    }
+
+    // --- COLLECTION RULES ---
+
+    match /users/{userId} {
+      // Public profile metadata (minimal)
+      allow read: if true;
+
+      // Config
+      match /config/{configId} {
+        allow read: if true;
+        allow create: if isOwner(userId) && isValidStoreConfig(incoming());
+        allow update: if isOwner(userId) && isValidStoreConfig(incoming()) &&
+                        incoming().diff(existing()).affectedKeys().hasOnly(['name', 'owner', 'whatsapp', 'type', 'address', 'bankAccount', 'logo', 'onboarded', 'categories', 'cashierPin', 'miniStoreGreeting', 'shareMessage', 'updatedAt']);
+      }
+
+      // Products
+      match /products/{productId} {
+        allow read: if true;
+        allow write: if isOwner(userId) && isValidId(productId) && isValidProduct(incoming());
+      }
+
+      // Images (Base64 storage for now as design choice)
+      match /images/{imageId} {
+        allow read: if true;
+        allow write: if isOwner(userId) && isValidId(imageId);
+      }
+
+      // Orders
+      match /orders/{orderId} {
+        // Owner can read all. Customers can read their own if whatsapp matches (rough check).
+        allow read: if isOwner(userId);
+        
+        // Public can create orders (mini-store checkout)
+        allow create: if isValidId(orderId) && isValidOrder(incoming());
+        
+        // Only owner can update status/details
+        allow update: if isOwner(userId) && isValidOrder(incoming()) &&
+                        incoming().createdAt == existing().createdAt;
+        allow delete: if isOwner(userId);
+      }
+
+      // Private collections (Customers, Expenses, Reminders, Notifications, Debts)
+      match /{collectionName}/{docId} {
+        allow read, write: if isOwner(userId) && 
+                           collectionName in ['customers', 'expenses', 'reminders', 'notifications', 'debts'];
+      }
+    }
+  }
+}

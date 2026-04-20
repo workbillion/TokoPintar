@@ -1,0 +1,9 @@
+{
+	"appId": "com.tokokita.app",
+	"appName": "TokoKita",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"androidScheme": "https"
+	}
+}
